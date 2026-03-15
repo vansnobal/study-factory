@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "enabled": false,
+  "teamName": "",
+  "feature": "anonymous-suggestion-box",
+  "pdcaPhase": "do",
+  "orchestrationPattern": "leader",
+  "ctoAgent": "opus",
+  "startedAt": "2026-03-15T09:39:41.669Z",
+  "lastUpdated": "2026-03-15T09:41:40.513Z",
+  "teammates": [],
+  "progress": {
+    "totalTasks": 0,
+    "completedTasks": 0,
+    "inProgressTasks": 0,
+    "failedTasks": 0,
+    "pendingTasks": 0
+  },
+  "recentMessages": [],
+  "sessionId": "9e8c7006-1603-4463-b084-8ebde9d6d7e9"
+}

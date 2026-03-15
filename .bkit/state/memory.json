@@ -1,0 +1,11 @@
+{
+  "sessionCount": 1,
+  "currentFeature": null,
+  "phase": "archived",
+  "matchRate": 96,
+  "lastSession": {
+    "startedAt": "2026-03-15T09:10:41.516Z",
+    "platform": "claude",
+    "level": "Dynamic"
+  }
+}

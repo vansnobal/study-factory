@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Category {
+  WELFARE
+  WORK_ENV
+  CULTURE
+  OTHER
+}
+
+enum Status {
+  RECEIVED
+  REVIEWING
+  COMPLETED
+  PENDING
+}
+
+model Suggestion {
+  id           String    @id @default(uuid())
+  trackingCode String    @unique @default(uuid())
+  category     Category
+  title        String
+  content      String
+  status       Status    @default(RECEIVED)
+  isPublic     Boolean   @default(false)
+  adminReply   String?
+  repliedAt    DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([status])
+  @@index([category])
+  @@index([createdAt])
+}
+
+model Admin {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
